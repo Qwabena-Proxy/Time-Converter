@@ -19,10 +19,12 @@ def time_convert(**kwargs):
     spl = a.split(':')
     if spl[0] not in time_convert_dict:
       print("Invalid Entry")
-    if int(spl[0]) > 12:
-      ti = time_convert_dict[spl[0]]
-      print(f'{ti}:{spl[1]} PM')
     else:
-      print(a +' AM')
       
+      if int(spl[0]) > 12:
+        ti = time_convert_dict[spl[0]]
+        print(f'{ti}:{spl[1]} PM')
+      else:
+        print(a +' AM')
+
  
